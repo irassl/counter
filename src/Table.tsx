@@ -25,7 +25,7 @@ export function Table(props: PropsTypeTable) {
 	}
 
 	return <div className={s.table}>
-		<Button  name={'icr'} callBack={addCounter} counter={props.counter} disabled={props.counter === props.maxcounter} />
-		<Button name={'reset'} callBack={resetCounter} counter={props.counter} disabled={props.counter <= 0} />
+		<Button  name={'icr'} callBack={addCounter} disabled={props.counter === props.maxcounter} />
+		<Button name={'reset'} callBack={resetCounter}  disabled={props.counter <= 0} />
 	</div>
 }

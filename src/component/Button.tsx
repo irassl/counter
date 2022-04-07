@@ -3,7 +3,7 @@ import s from '../Counter.module.css'
 type ButtonType = {
 	name: string,
 	callBack: () => void,
-	counter: number,
+
 	disabled: boolean
 
 }

@@ -7,16 +7,20 @@ import { Settings } from './Setting';
 
 function App() {
   let [counter, setCounter] = useState<number>(0)
+  let [minCounter, setMinCounter]= useState<number>(0)
   let [maxCounter, setMaxCounter]= useState<number>(5)
-  let [minCounter, setMinCounter]= useState<number>(counter)
+  
   
   useEffect(()=>{
-    let valueSettings= localStorage.getItem('counterMinInput')
+    let valueSettings= localStorage.getItem('counterInput')
+    let valueMinSettings= localStorage.getItem('counterMinInput')
     let valueMaxSettings= localStorage.getItem('counterMaxInput')
-    if(valueSettings && valueMaxSettings){
+    if(valueSettings && valueMinSettings && valueMaxSettings){
       let newValue= JSON.parse(valueSettings)
+      let newMinValue= JSON.parse(valueMinSettings)
       let newMaxValue= JSON.parse(valueMaxSettings)
-      setMinCounter(newValue)
+      setCounter(newValue)
+      setMinCounter(newMinValue)
       setMaxCounter(newMaxValue)
     }
   },[])
@@ -33,18 +37,19 @@ function App() {
   }
 
   function resetCounter() {
-    setCounter(0)
+    setCounter(minCounter)
   }
   function setSettings(){
-    localStorage.setItem('counterInput', JSON.stringify(counter))
-    localStorage.setItem('counterMaxInput', JSON.stringify(maxCounter))
+   /*  localStorage.setItem('counterInput', JSON.stringify(counter))
+    localStorage.setItem('counterMinInput', JSON.stringify(minCounter))
+    localStorage.setItem('counterMaxInput', JSON.stringify(maxCounter)) */
     setCounter(minCounter)
   }
  
   return (
     <div className={s.main}>
       <div  className={s.settings} >
-      <Settings minCounter={counter} maxCounter={maxCounter} setSettings={setSettings} setCounter={setCounter} setMaxCounter={setMaxCounter}      />
+      <Settings minCounter={minCounter} maxCounter={maxCounter} setSettings={setSettings} setMinCounter={setMinCounter} setMaxCounter={setMaxCounter}      />
      
     </div>
     <div className={s.count}>
