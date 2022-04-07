@@ -1,0 +1,80 @@
+.main{
+  display: flex;
+}
+.count{
+  order: 1;
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  background: rgb(11, 11, 134);
+  border-radius: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  border: 1px solid #FFF;   
+}
+.settings{
+  order: 2;
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  background: rgb(11, 11, 134);
+  border-radius: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin:  10px;
+  border: 1px solid #FFF;
+}
+.counter{
+  height: 130px;
+  margin: 10px;
+  padding: 5px;
+  background: rgb(11, 11, 134);
+  font-weight: 100;
+  border-radius: 5px;
+  border: 1px solid #FFF;
+}
+.table{
+  height: 100px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #FFF;
+  background: rgb(11, 11, 134);;
+}
+.btn{
+  font-size:50px;
+  text-align: center;
+  font-weight: bold;
+  height: 80px;
+  width: 160px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #FFF;
+  background: #FFF;
+}
+.input{
+  font-size:30px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+.h1{
+  font-size:100px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+
+}
+.error{
+  font-size:100px;
+  font-weight: bold;
+  color: red;
+  text-align: center
+}
